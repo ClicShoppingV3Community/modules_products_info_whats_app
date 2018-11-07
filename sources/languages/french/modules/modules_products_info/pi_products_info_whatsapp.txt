@@ -1,0 +1,3 @@
+module_products_info_whatsapp = Souhaitez-vous afficher un bouton d'appel What's App
+module_products_info_whatsapp_description = afficher un bouton d'appel What's App
+text_whatsapp = What's App

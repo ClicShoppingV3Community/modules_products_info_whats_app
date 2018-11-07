@@ -1,0 +1,3 @@
+module_products_info_whatsapp = Do you want to display a What's App button to call you
+module_products_info_whatsapp_description = Display a What's App button to call you
+texx_whatsapp = What's App
