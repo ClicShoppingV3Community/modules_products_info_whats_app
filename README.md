@@ -30,7 +30,7 @@ Implementation:
 
 - Copy the modules_products_info_whats_app.json into ClicShopping/Work/Cache/Github (manual installation)
 
- All informations about the CliCshopping
+ All informations about the ClicShopping
 
  Community : https://www.clicshopping.org
 
