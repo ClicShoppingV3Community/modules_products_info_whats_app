@@ -35,15 +35,15 @@
     }
 
     public function execute() {
+      $CLICSHOPPING_ProductsCommon = Registry::get('ProductsCommon');
 
-      if (isset($_GET['products_id']) && isset($_GET['Products']) ) {
-
+      if ($CLICSHOPPING_ProductsCommon->getID() && isset($_GET['Products']) ) {
         $content_width = (int)MODULE_PRODUCTS_INFO_WHATSAPP_CONTENT_WIDTH;
         $text_position = MODULE_PRODUCTS_INFO_WHATSAPP_POSITION;
 
-        $CLICSHOPPING_ProductsCommon = Registry::get('ProductsCommon');
         $CLICSHOPPING_Template = Registry::get('Template');
-        $products_id = $CLICSHOPPING_ProductsCommon->getID;
+
+        $products_id = $CLICSHOPPING_ProductsCommon->getID();
 
         $product_name = HTML::sanitize($CLICSHOPPING_ProductsCommon->getProductsName($products_id));
         $phone_number = HTML::sanitize(MODULE_PRODUCTS_INFO_WHATSAPP_PHONE_NUMBER);
@@ -54,7 +54,7 @@
           $products_whatsapp_content = '<!-- Start $products_whatsapp -->' . "\n";
 
           ob_start();
-          require($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/products_info_whatsapp'));
+          require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/products_info_whatsapp'));
           $products_whatsapp_content .= ob_get_clean();
 
           $products_whatsapp_content .= '<!-- $products_whatsapp -->' . "\n";
