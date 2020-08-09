@@ -141,7 +141,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_PRODUCTS_INFO_WHATSAPP_STATUS',
         'MODULE_PRODUCTS_INFO_WHATSAPP_PHONE_NUMBER',
         'MODULE_PRODUCTS_INFO_WHATSAPP_CONTENT_WIDTH',
